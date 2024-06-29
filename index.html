@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Tube Hub</title>
+
+    <style>
+        .tab-action {
+            cursor: pointer;
+            padding: 4px 7px;
+            margin: 5px;
+            display: inline-block;
+            border: 1px solid #ccc;
+            
+        }
+        .tab-action.active {
+            background-color: rgb(0, 182, 0);
+            font-weight: bold;
+            color: white;
+        }
+    </style>
+  </head>
+  <body class="mx-10">
+    <header>
+      <div class="navbar border-b-2 py-4">
+        <div class="navbar-start">
+          <p class="text-2xl font-bold">
+            <span class="text-green-600">Tube</span>Hub
+          </p>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+          <button class="btn btn-sm text-xl font-semibold">Sort by View</button>
+        </div>
+        <div class="navbar-end">
+          <a class="btn bg-green-600 text-white font-semibold">Blog</a>
+        </div>
+      </div>
+    </header>
+    <main>
+        <div id="tabs" class="mt-10 text-center">
+          <div class="tab-action active" data-category="1000">All</div>
+          <div class="tab-action" data-category="1001">Music</div>
+          <div class="tab-action" data-category="1003">Comedy</div>
+          <div class="tab-action" data-category="1004">Drawing</div>
+      </div>
+      <div class="card-container my-10 ">
+        
+  <div id="videos" class="grid lg:grid-cols-4 md:grid-cols-3 gap-10"></div>
+      </div>
+    </main>
+    <footer></footer>
+    <script src="Script/script.js"></script>
+  </body>
+</html>

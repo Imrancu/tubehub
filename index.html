@@ -19,6 +19,10 @@
         display: inline-block;
         border: 1px solid #ccc;
       }
+      .tab-action:hover{
+        background: rgb(0, 182, 0);
+        color: white;
+      }
       .tab-action.active {
         background-color: rgb(0, 182, 0);
         font-weight: bold;
@@ -30,9 +34,9 @@
     <header>
       <div class="navbar border-b-2 py-4">
         <div class="navbar-start">
-          <p class="text-2xl font-bold">
+          <a href="#" class="text-2xl font-bold">
             <span class="text-green-600">Tube</span>Hub
-          </p>
+          </a>
         </div>
         <div class="navbar-center hidden lg:flex">
           <button id="sortByViewBtn" class="btn btn-sm text-xl font-semibold">
@@ -40,7 +44,7 @@
           </button>
         </div>
         <div class="navbar-end">
-          <a class="btn bg-green-600 text-white font-semibold" href="/blog.html"
+          <a class="btn bg-green-600 hover:bg-green-400 text-white font-semibold" href="/blog.html"
             >Blog</a
           >
         </div>

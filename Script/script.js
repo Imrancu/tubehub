@@ -2,7 +2,7 @@
 let currentVideos = [];
 
 // Function to fetch and display videos for a category
-const fetchVideos = async (categoryId) => {
+const loadVideos = async (categoryId) => {
   const videosContainer = document.getElementById("videos");
   videosContainer.innerHTML = `<span class="loading loading-dots loading-xs"></span>
       <span class="loading loading-dots loading-sm"></span>
@@ -28,6 +28,7 @@ const fetchVideos = async (categoryId) => {
   }
 }
 
+
 // Function to display videos
 const displayVideos = (videos) => {
   const videosContainer = document.getElementById("videos");
@@ -44,14 +45,14 @@ const displayVideos = (videos) => {
           />
         </figure>
         <div class="card-body">
-          <div class="avatar">
-            <div class="w-8 rounded-full">
-              <img src="${video.authors[0].profile_picture}" />
+          <div class="flex">
+            <div>
+              <img class="w-8 h-8 rounded-full" src="${video.authors[0].profile_picture}" />
             </div>
+            <h2 class="ml-2 text-xl">${video.title.slice(0,12)}...</h2>
           </div>
           <div>
-            <h2 class="card-title">${video.title}</h2>
-            <p>${video.authors[0].profile_name} <span class="font-semibold">${video.authors[0].verified === true ? "Verified" : ""}</span></p>
+            <p class='flex items-center'>${video.authors[0].profile_name} <span class="font-semibold">${video.authors[0].verified === true ? "<img  class='w-5 ml-2' src='/assets/blue.png' />" : ""}</span></p>
             <p>${video.others.views}</p>
           </div>
         </div>
@@ -74,7 +75,7 @@ function handleTabClick(event) {
     
     // Fetch videos for the selected category
     const categoryId = event.target.getAttribute("data-category");
-    fetchVideos(categoryId);
+    loadVideos(categoryId);
   }
 }
 
@@ -95,4 +96,4 @@ document.getElementById("tabs").addEventListener("click", handleTabClick);
 document.getElementById("sortByViewBtn").addEventListener("click", sortVideosByView);
 
 // Fetch videos for the default (All) category when the page loads
-document.addEventListener("DOMContentLoaded", () => fetchVideos("1000"));
+document.addEventListener("DOMContentLoaded", () => loadVideos("1000"));

@@ -46,10 +46,10 @@ TubeHub is a responsive web application that showcases video content across vari
 
 ## Contributing
 
-Contributions, issues, and feature requests are welcome. Feel free to check [issues page](https://github.com/your-username/tube-hub/issues) if you want to contribute.
+Contributions, issues, and feature requests are welcome. Feel free to check [issues page](https://github.com/Imrancu/tube-hub/issues) if you want to contribute.
 
 ## Contact
 
 Mohammad Imran - mdimran3772@gmail.com
 
-Project Link: [https://github.com/your-username/tube-hub](https://github.com/your-username/tube-hub)
+Project Link: [https://imrancu.github.io/tubehub](https://imrancu.github.io/tubehub)
